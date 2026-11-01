@@ -70,9 +70,9 @@ Instead of six separate topics, every week takes **the RD Forever Fitness demo**
 - **Proof:** a one-page data-flow diagram of the demo, which I can explain in 2 minutes.
 
 ### Week 2: Make it reliable (Gap 3 + the misconception)
-- Write **10–20 test cases** for the gym demo (booking form + chat assistant): known inputs → the correct quote (including edge cases, missing info, silly inputs). Run them.
+- Write **10–20 test cases** for the gym demo (booking form + chat assistant): known questions or bookings → the correct reply (including edge cases, missing info, silly inputs). Run them.
 - Break it on purpose: turn off a connection, send duplicate enquiries, feed it bad data. What happens?
-- Add (or design) **failure handling:** an alert to a person, no duplicate actions, and **human approval before any quote goes to a customer.**
+- Add (or design) **failure handling:** an alert to a person, no duplicate actions, and **human approval before anything risky goes to a customer (injury advice, under-18s, refunds).**
 - **Proof:** a test sheet with results, plus a plain-English answer to "what happens when it goes wrong?"
 
 ### Week 3: Privacy & security (Gap 2) → unlocks paid workshops
