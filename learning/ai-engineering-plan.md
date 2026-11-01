@@ -1,8 +1,12 @@
 # AI Engineering: Career Curriculum (v3)
 
-**Goal:** Become a genuine AI engineer: someone who can design, build, test, deploy and support AI systems, and can honestly call themselves one. Selling workshops and integrations to local businesses comes **out of** these skills; it isn't the curriculum.
+**Goal:** Build a business selling AI services (workshops now, integrations as my skills grow) on **real engineering foundations** that compound over years. I'm not job-hunting. Every project I build should be something I can **sell or show to a client**, not a portfolio piece for recruiters.
 
-**Time:** 8–10 hrs/week. **Honest timeline: about 6 months** to the point where "AI engineer" is a fair title (Phases 1–3 done, three deployed projects on GitHub). It's a career, not a 6-week course.
+**Two tracks, run in parallel:**
+- **Engineering track (~70% of my time, 6–7 hrs/week):** the curriculum below. This is what compounds.
+- **Selling track (~30%, 2–3 hrs/week):** meetings, talks and client work, offering **only what my skills currently support** (see the Offer Ladder).
+
+**Honest timeline:** about 6 months to Phase 3, the point where "AI engineer" is a fair description and I can sell bigger builds with confidence. Until then: "AI consultant" or "I help businesses put AI to work."
 
 **Sources:** Sajjaad Khader's AI engineer roadmap (the *what*) · Nick Saraev's AI learning method (the *how*) · my Interviewer gap analysis (where I started).
 
@@ -13,10 +17,24 @@
 1. **This file is the source of truth.** Every session starts with: *"Which milestone am I on?"* and ends by ticking something off.
 2. **Every session produces code I wrote or changed and can explain.** A session that's only talk doesn't count.
 3. **My existing tools are case studies, not the curriculum.** They come in at set points (marked 📁) to show a concept in the real world, then I move on.
-4. **Sales/pitch practice: at most one session per phase.** Everything else is engineering.
+4. **Study sessions are engineering.** Selling happens in the field (meetings, calls, client work), not in study sessions. Pitch practice is at most one study session per phase.
 5. **New ideas go in the Parking Lot** (bottom of this file), not into the plan.
 6. **AI as tutor, not ghostwriter, while learning.** I write the first version myself, then AI reviews it (Checker). I use agents to write code for a skill only after I've done it by hand once.
 7. **End of each phase: the no-AI rebuild.** I rebuild a small version of the phase project with no AI help. If I can't, I'm not done with the phase.
+
+8. **Sell only what the Offer Ladder says I've unlocked.** No promising builds I can't yet support.
+
+---
+
+## Offer Ladder (what I can honestly sell, by phase)
+
+| Unlocked after | I can sell | Why it's honest |
+|---|---|---|
+| **Now** | Free talks; paid "use AI well and safely" workshops for teams (ChatGPT/Claude/Copilot, prompting, an AI usage policy) | A year of real use plus client work already supports this |
+| **Phase 1** | Simple no-code automations (Zapier/Make/n8n), set up and supported | I understand APIs, data and failures well enough to fix them |
+| **Phase 2** | Small AI integrations: enquiry triage, document extraction, drafting tools, with structured output, validation and a human check | I can build, read and debug them myself |
+| **Phase 3** | Bigger builds: document Q&A (RAG) assistants, agents connected to business tools, deployed and measured with evals | I can test, deploy, monitor and support them |
+| **Phase 4+** | Ongoing retainers, higher-ticket systems, case-study-led selling | A track record |
 
 ---
 
@@ -34,7 +52,7 @@
 | SQL basics (SQLite) | Create a table, INSERT, SELECT/WHERE/JOIN from Python |
 | Testing basics | Write and run simple `pytest` tests |
 
-**Project 1:** a command-line tool that pulls data from a free public API (e.g. weather or companies data), stores it in SQLite, answers questions about it, and has tests. **On GitHub.**
+**Project 1:** a lead-list builder. It pulls local businesses from a free public API (e.g. the Companies House API), stores them in SQLite, filters by area and industry, and has tests. A real foundation skill, and useful for my own prospecting.
 
 ---
 
@@ -52,7 +70,7 @@
 
 📁 **Case study (1 session): my quote tool.** It's a live example of "the LLM does language, deterministic code does maths" plus schema validation. Read `engine/` and trace one quote through the code.
 
-**Project 2:** an enquiry triage tool. Messy incoming messages (emails or texts) → model extracts structured fields → validated → routed/stored in SQLite → drafted reply. Includes cost tracking and tests.
+**Project 2 (sellable):** an enquiry triage tool, the kind of thing I'd sell after Phase 2. Messy incoming messages (emails or texts) → model extracts structured fields → validated → routed/stored in SQLite → drafted reply. Includes cost tracking and tests.
 
 ---
 
@@ -73,19 +91,19 @@
 📁 **Case study (1 session): missed-call text-back.** Webhooks, third-party APIs (telephony/SMS), and what happens when a step fails.
 📁 **Case study (1 session): quote tool evals.** Its `tests/golden/` folder is a real golden dataset. Run the tests, break a rate on purpose, watch them catch it.
 
-**Project 3:** a document Q&A assistant (RAG) over a realistic small-business document set, **with an eval suite and a published accuracy score**, deployed with a web endpoint.
-**Project 4:** an agent that completes a multi-step business task using my own MCP server, with human approval on risky actions.
+**Project 3 (sellable):** a document Q&A assistant (RAG), e.g. "ask our staff handbook / price list / policies," **with an eval suite and a measured accuracy score**, deployed with a web endpoint. My Phase 3 demo for clients.
+**Project 4 (sellable):** an agent that completes a multi-step business task (e.g. enquiry → check calendar → draft booking → wait for approval) using my own MCP server.
 
 ---
 
-## Phase 4: Proof and career (weeks 23–26, then ongoing)
+## Phase 4: Proof and compounding (weeks 23–26, then ongoing)
 
-- **Capstone:** one complete system for a real (or realistic) client: data in, AI in the right places, deterministic logic elsewhere, evals, deployed, documented.
-- **Portfolio:** a GitHub profile with Projects 1–4 + capstone, each with a README explaining the architecture, decisions and eval results.
-- **Case studies:** my existing client work + the quote tool, written up properly.
-- **Visibility:** post what I build (LinkedIn), go to local meetups.
-- **Optional credential:** one recognised certificate if it helps, but the portfolio is the proof.
-- *Now* I package workshops and integrations, from real skill.
+- **Capstone = a real paid client build:** data in, AI in the right places, deterministic logic elsewhere, evals, deployed, documented, supported.
+- **Case studies:** every client job written up (problem → what I built → measured result). These replace a CV.
+- **Demo library:** Projects 2–4 + the quote tool, each ready to show in 5 minutes and explain technically if asked.
+- **Visibility:** post what I build (LinkedIn), speak at local meetings.
+- **Keep compounding:** one new skill per quarter (e.g. voice agents, fine-tuning basics, more advanced evals), picked from the Parking Lot, never more than one at a time.
+- **Optional:** a job or contract role later, if I ever want one. The same foundations make that possible.
 
 ---
 
@@ -116,4 +134,4 @@
 ## Parking Lot (ideas that are NOT part of the current plan)
 
 - Pitch for the AmSpec/Andrew follow-up: "how does it get its data?" answer (drafted 2026-11-01)
-- Workshop and offer packaging → Phase 4
+- Workshop content and pricing → selling track (unlocked **now**)
