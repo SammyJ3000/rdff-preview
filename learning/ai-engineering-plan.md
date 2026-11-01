@@ -31,7 +31,9 @@
 
 ## The big change: learn everything through ONE demo
 
-Instead of six separate topics, every week takes **the RD Forever Fitness demo** apart from a different angle. By week 6 I can explain one real tool completely, covering data, privacy, failures, cost and accuracy. That's the credibility. It's also what Nick means by *production over consumption*: I learn by doing things to a real tool, not by watching videos about one.
+**Main demo:** my AmSpec quoting tool, where I lost Andrew because I couldn't explain how it gets its data. **Warm-up / BNI example:** a missed-call text-back tool (simpler, and every small business gets it straight away).
+
+Instead of six separate topics, every week takes **my AmSpec quoting demo** apart from a different angle. By week 6 I can explain one real tool completely, covering data, privacy, failures, cost and accuracy. That's the credibility. It's also what Nick means by *production over consumption*: I learn by doing things to a real tool, not by watching videos about one.
 
 ## Offer stages (don't skip ahead)
 
@@ -46,7 +48,7 @@ Instead of six separate topics, every week takes **the RD Forever Fitness demo**
 
 ## The weekly learning loop (Nick Saraev's method)
 
-1. **Explain** (Explainer): *"Explain [topic] using the RD Forever Fitness demo as the example, at business-owner level, then junior-developer level."*
+1. **Explain** (Explainer): *"Explain [topic] using my AmSpec quoting demo as the example, at business-owner level, then junior-developer level."*
 2. **Redo without help.** After any explanation, go back to the start and do or explain it myself with no AI. It only adds 10–15% more time and makes the biggest difference. Nodding along to an explanation means I've only read about it, not learned it.
 3. **Socratic:** *"Don't give me answers. Ask me questions about [topic] until I find what I don't know."*
 4. **Build / Check:** do the week's task, then *"Here's my work and reasoning. Find what's wrong or missing and any faster way. Don't rewrite it."*
@@ -63,16 +65,16 @@ Instead of six separate topics, every week takes **the RD Forever Fitness demo**
 ## The 6 weeks
 
 ### Week 1: Trace the data (Gap 1)
-- Draw the full journey of one enquiry through the RD Forever Fitness demo: customer → form/message → API call(s) → my app → AI model (if any) → storage → reply.
+- Draw the full journey of one enquiry through my AmSpec quoting demo: customer → form/message → API call(s) → my app → AI model (if any) → storage → reply.
 - For every arrow, note **what data moves, where it's stored, who can see it, and what happens if that step fails.**
 - Learn just enough about APIs to follow it: requests and responses, API keys, JSON, status codes (200/401/429/500), webhooks.
 - **Redo without help:** redraw the diagram from memory.
-- **Proof:** a one-page data-flow diagram of the demo, which I can explain in 2 minutes.
+- **Proof:** a one-page data-flow diagram of the demo, plus a 2-minute answer to Andrew's question: *"How do you get the data, and how does it work?"*
 
 ### Week 2: Make it reliable (Gap 3 + the misconception)
-- Write **10–20 test cases** for the gym demo (booking form + chat assistant): known questions or bookings → the correct reply (including edge cases, missing info, silly inputs). Run them.
+- Write **10–20 test cases** for the AmSpec quoting demo: known requests → the correct quote (including edge cases, missing info, silly inputs). Run them.
 - Break it on purpose: turn off a connection, send duplicate enquiries, feed it bad data. What happens?
-- Add (or design) **failure handling:** an alert to a person, no duplicate actions, and **human approval before anything risky goes to a customer (injury advice, under-18s, refunds).**
+- Add (or design) **failure handling:** an alert to a person, no duplicate actions, and **human approval before any quote goes to a customer.**
 - **Proof:** a test sheet with results, plus a plain-English answer to "what happens when it goes wrong?"
 
 ### Week 3: Privacy & security (Gap 2) → unlocks paid workshops
@@ -84,7 +86,7 @@ Instead of six separate topics, every week takes **the RD Forever Fitness demo**
 
 ### Week 4: LLMs, RAG & accuracy (Gaps 4 + 6)
 - The difference between training a model, putting information in its context, and retrieving documents (RAG). RAG supplies relevant information; it doesn't guarantee correct answers.
-- **Rules vs generation:** answers matched by fixed rules (as the demo chat does now) need different checks from answers an AI writes freely, e.g. prices, timetables, injury advice. Decide which parts of my demo should be rules and which should be AI.
+- **Rules vs generation:** a price calculated by fixed business rules needs different checks from a price an AI writes in conversation. Decide which parts of my demo should be rules and which should be AI.
 - Context windows, missing information, conflicting instructions: why adding another rule doesn't reliably fix a failure, and why the week 2 tests matter.
 - **Proof:** a "where AI is and isn't used in this tool, and why" explanation.
 
