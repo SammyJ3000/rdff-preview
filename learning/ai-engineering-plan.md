@@ -1,125 +1,108 @@
-# AI Engineering for Business: 6-Week Learning Plan
+# AI for Business: Personal Learning Plan (v2: after the Interviewer)
 
-**Goal:** Understand AI systems well enough to (1) teach business owners at Chamber of Commerce / BNI meetings, (2) sell workshops, and (3) scope and deliver AI integrations, all without overclaiming.
+**Goal:** Be credible in front of skeptical local business owners (Chamber of Commerce, BNI). Teach practical AI use first, sell workshops next, and sell integrations only once I can explain, test and support what I build.
 
-**Built from:**
-- *How to Become a $300K AI Engineer in 2026* (Sajjaad Khader): **what** to learn
-- *How I Learn Complex Skills & Difficult Subjects So Fast with AI* (Nick Saraev): **how** to learn it
+**Time:** 6–10 hrs/week. Launch in a few weeks.
 
-**Time budget:** about 6 hours/week for 6 weeks (about 36 hours), then 1–2 hours/week to keep it fresh.
+**Sources:** Sajjaad Khader, *How to Become a $300K AI Engineer in 2026* (what to learn) · Nick Saraev, *How I Learn Complex Skills & Difficult Subjects So Fast with AI* (how to learn) · my Interviewer session (where I actually am).
 
 ---
 
-## 1. First, adjust the roadmap to your goal
+## Where I am (Interviewer result)
 
-Sajjaad's roadmap is built to get someone **hired as a software engineer at a big tech company**. You're doing something different: **advising and implementing for small businesses**. So some of it matters a lot more for you, and some of it barely matters.
+> My ability to **build** with AI is well ahead of my ability to **explain, verify and support** what I've built.
 
-| Roadmap item | Verdict for you | Why |
+**Strengths:** paid client work, tools I use daily, connected external data, turning business problems into product ideas, I know why context and project rules matter, I can spot commercially useful problems (missed leads, slow quoting, scattered information, admin).
+
+**Gaps, ranked:**
+1. How data moves through a tool (APIs, storage, what happens when a connection fails)
+2. Privacy & security (using data vs training on it, permissions, keys, storage, provider policies)
+3. Reliability & safe limits (fixed scripts fail too; testing, failure alerts, human approval)
+4. LLMs vs RAG vs factual accuracy (rule-based prices vs AI-generated prices)
+5. Real operating costs (my £20–£50/month estimate isn't backed up yet)
+6. Prompting & context limits (adding another rule doesn't fix everything)
+7. Automation vs agents vs MCP (the right vocabulary and the limits)
+
+**Misconception to kill first:** *"An automation can't make mistakes because it does the same thing every time."* If an automation does the same thing every time, it also makes the same mistake every time.
+
+**Skip for now:** training models, maths, transformer internals, fine-tuning, running my own model infrastructure, complex multi-agent systems, building custom MCP servers, learning every automation platform, model-comparison rabbit holes, "I can integrate your whole business" claims.
+
+---
+
+## The big change: learn everything through ONE demo
+
+Instead of six separate topics, every week takes **my quoting demo** apart from a different angle. By week 6 I can explain one real tool completely, covering data, privacy, failures, cost and accuracy. That's the credibility. It's also what Nick means by *production over consumption*: I learn by doing things to a real tool, not by watching videos about one.
+
+## Offer stages (don't skip ahead)
+
+| Stage | What I sell | When |
 |---|---|---|
-| **Python** | **Read it, don't master it** (~4 hrs) | Your agents write it. You need to read a script, roughly follow what it does, and notice when it's wrong. Learning it in depth would take months and wouldn't help you sell. |
-| **SQL** | **Concepts only** (~1 hr) | Know what a database is and what SELECT / WHERE / JOIN do. Your clients' data mostly lives in spreadsheets, CRMs and accounting tools. |
-| **APIs** | **Must know** | Every integration you sell is an API connection. You have to explain it simply and make a call yourself. |
-| **Context engineering** | **Core skill: go deep** | This is where your year of hands-on use already pays off. System prompts, master prompts, Projects / Custom GPTs / Gems. It's also your workshop content. |
-| **AI APIs (OpenAI / Anthropic)** | **Must know** | Keys, tokens, pricing, rate limits. You'll need these to quote integration jobs. |
-| **Running your own models (Hugging Face)** | **Light, but keep it** (~2 hrs) | Running a local model (e.g. with Ollama) gives you a strong answer to *"Does my data leave the building?"* |
-| **RAG** | **Must know, core skill** | "A chatbot that knows *our* documents" is the most common SMB integration request. |
-| **Agents + MCP** | **Must know** | You already use agents. Learn the vocabulary and the limits so you can explain them to clients and scope work. |
-| **Docker / AWS / GCP** | **Know what they are, skip the skills** | You'll mostly deliver through no-code / managed tools. Deep deployment skills are for engineers. |
-| **Evals + governance (cost, model routing)** | **Must know, in plain English** | "How do we know it's right?" and "What will it cost per month?" are the two questions every owner asks. |
-| **Level 4: landing the job** | **Replace** | You don't need a résumé. You need **case studies, demos and a clear offer** (see Week 6). |
-
-### What the video leaves out (and your clients *will* ask about)
-1. **Data privacy & security**: what happens to data typed into ChatGPT, business vs consumer plans, data-protection law (GDPR / UK GDPR or your local equivalent), training opt-outs.
-2. **Limitations & hallucinations**: when *not* to use AI. Being honest about this builds trust faster than anything else.
-3. **No-code automation**: Zapier, Make, n8n. Most small-business "AI integrations" are really workflows built in these tools.
-4. **The tools they already pay for**: Microsoft 365 Copilot and Gemini in Google Workspace. "Get value from what you already have" is an easy first sale.
-
-### On the credibility worry
-Don't call yourself an "AI engineer." To a skeptical business owner, that title is a claim they'll try to disprove. Something like **"AI implementation consultant"** or **"I help local businesses put AI to work"** is honest, and it's what they're actually buying. They're won over by a **live demo on their kind of business**, a **plain-English explanation**, and **a result you got for a client**, not by a title. This plan is designed to give you all three.
+| 1 | Free talks + "how to use ChatGPT/Claude/Copilot well" sessions | **Now.** This uses strengths I already have. |
+| 2 | Paid hands-on workshops (staff using AI safely) | After Week 3 (privacy covered) |
+| 3 | Small, supervised integrations (human approves outputs) | After Week 6, starting with a narrow, tested tool |
+| 4 | Unattended integrations with sensitive data or customer commitments | Later, once I have case studies and proper testing |
 
 ---
 
-## 2. How you'll learn (Nick Saraev's method, applied)
+## The weekly learning loop (Nick Saraev's method)
 
-**Core principle:** you learn by **producing** (recalling, explaining, predicting, building), not by **consuming** (watching, rereading). Production takes more effort, but you forget far less of it. So no tutorial binges: every session ends with you *producing* something.
+1. **Explain** (Explainer): *"Explain [topic] using my quoting demo as the example, at business-owner level, then junior-developer level."*
+2. **Redo without help.** After any explanation, go back to the start and do or explain it myself with no AI. It only adds 10–15% more time and makes the biggest difference. Nodding along to an explanation means I've only read about it, not learned it.
+3. **Socratic:** *"Don't give me answers. Ask me questions about [topic] until I find what I don't know."*
+4. **Build / Check:** do the week's task, then *"Here's my work and reasoning. Find what's wrong or missing and any faster way. Don't rewrite it."*
+5. **Listener:** explain the week's topic three ways: **talk** (voice memo, as if to a BNI room), **draw** (quick sketch), **write** (short version). Then *"Grade all three against [source]. What did I miss or get wrong?"*
+6. **Examiner:** *"Quiz me one question at a time, each harder than the last, until I start guessing. Then tell me my level."*
+7. **Clerk:** *"Turn my notes into a clean outline + flashcards. Don't add anything I didn't write."* Put the cards into Anki and review them for 10 min/day.
 
-### The AI roles you'll use (copy-paste prompts)
+**Running "hard questions" list:** every week, add the 5 hardest questions a skeptical owner could ask about that topic, then answer them out loud without notes.
 
-| Role | When | Prompt to use |
-|---|---|---|
-| **Interviewer** | Day 1 | *"Interview me one question at a time to find out what I already know about how LLMs, APIs, RAG, agents and automation work. My goal is to teach and sell AI to small businesses. After 10–15 questions, summarize my gaps."* |
-| **Mapmaker** | Day 1 | *"Using my gaps and this plan [paste], adjust the 6-week curriculum. Flag anything I can skip."* |
-| **Explainer (right level)** | Each new concept | *"Explain [concept] three ways: to a 12-year-old, to a business owner, to a junior developer. Then give one real small-business example."* |
-| **Socratic questioner** | After each explanation | *"Don't explain. Ask me questions that make me reason my way to how [concept] works. Correct me only when I'm stuck."* |
-| **Examiner** | End of each week | *"Quiz me on this week's topics: 10 questions, mixed difficulty, one at a time. Make them harder when I get them right (keep me at the edge of what I know). Score me at the end."* |
-| **Checker** | When you build things | *"Here's what I built and why [paste]. Don't fix it. Critique my reasoning and tell me what I misunderstood."* |
-| **Listener** | 2–3× per week | Record yourself (voice memo) explaining a topic as if to a BNI room, transcribe it, then: *"Compare my explanation to [source]. What did I get wrong, leave out, or make too vague?"* |
-| **Diagnostician** | End of weeks 3 and 6 | *"Here are all my quiz mistakes so far [paste]. What underlying misconceptions keep causing them?"* |
-| **Sparring partner** | Weeks 5–6 | *"Play a skeptical 55-year-old accountant at a BNI meeting who thinks AI is hype and worries about client confidentiality. Push back hard on my pitch. Afterwards, tell me where I was vague."* |
-| **Clerk** | End of each session | *"Turn these messy notes into a clean outline and 10 flashcards (question → answer)."* Import the cards into Anki. |
-
-**Spaced repetition:** 10 minutes a day reviewing your flashcards in Anki. This keeps what you learn in week 1 from fading by week 6.
-
-**Watch out for over-reliance:** Nick's GPS analogy applies here. If an agent does everything, you understand nothing. Rule: **before you ask an agent to build something, write down how you think it should work. Afterwards, explain back what it did.**
-
-### Each weekly cycle (about 6 hrs)
-1. **Explain** (1 hr): explainer + 1–2 short resources
-2. **Question** (1 hr): Socratic loop
-3. **Build** (2.5 hrs): a small hands-on project
-4. **Teach back** (1 hr): listener: record a 3-minute explanation for business owners
-5. **Test** (30 min): examiner quiz + clerk → flashcards
+**Rule against over-reliance:** before asking an agent to build or fix anything, write down how I think it works. Afterwards, explain back what it did.
 
 ---
 
-## 3. The 6 weeks
+## The 6 weeks
 
-### Week 1: How LLMs actually work + context engineering
-**Concepts:** tokens, context window, training vs. inference, why models hallucinate, temperature, system prompts, master prompts, Projects / Custom GPTs / Gems.
-**Build:** a master prompt for one business type (e.g. an estate agent). Build it as a Claude Project or Custom GPT with their tone, services and FAQs, and test it with 10 realistic tasks.
-**Proof for businesses:** a 3-minute "Why AI makes things up, and how to stop it" explanation. This becomes your first meeting talk.
+### Week 1: Trace the data (Gap 1)
+- Draw the full journey of one enquiry through my quoting demo: customer → form/message → API call(s) → my app → AI model (if any) → storage → reply.
+- For every arrow, note **what data moves, where it's stored, who can see it, and what happens if that step fails.**
+- Learn just enough about APIs to follow it: requests and responses, API keys, JSON, status codes (200/401/429/500), webhooks.
+- **Redo without help:** redraw the diagram from memory.
+- **Proof:** a one-page data-flow diagram of the demo, which I can explain in 2 minutes.
 
-### Week 2: APIs, and reading code without fear
-**Concepts:** what an API is (Sajjaad's bank/ATM analogy is a good one to borrow), API keys, requests/responses, JSON, tokens = cost, rate limits. Python and SQL basics: just enough to read.
-**Build:** with your agent's help, a script that reads a text file and sends it to the Anthropic or OpenAI API for a 3-sentence summary plus action items (the video's own starter project). **You** annotate every line in plain English before running it.
-**Also:** work out the monthly API cost of that script for a business processing 500 emails/month.
-**Proof:** a cost-estimate template you can reuse when quoting.
+### Week 2: Make it reliable (Gap 3 + the misconception)
+- Write **10–20 test cases** for the quoting tool: known inputs → the correct quote (including edge cases, missing info, silly inputs). Run them.
+- Break it on purpose: turn off a connection, send duplicate enquiries, feed it bad data. What happens?
+- Add (or design) **failure handling:** an alert to a person, no duplicate actions, and **human approval before any quote goes to a customer.**
+- **Proof:** a test sheet with results, plus a plain-English answer to "what happens when it goes wrong?"
 
-### Week 3: No-code automation + the tools businesses already own
-**Concepts:** triggers, actions, webhooks; Zapier vs Make vs n8n; Copilot in M365 and Gemini in Workspace.
-**Build:** an automation in Make or n8n: new web-form lead → AI drafts a personalized reply → saves it to Gmail drafts + logs to a Google Sheet.
-**Proof:** a screen recording of it running. This is your best demo for BNI. **Diagnostician check-in at the end of this week.**
+### Week 3: Privacy & security (Gap 2) → unlocks paid workshops
+- Using data vs training on data; consumer vs business/API plans; provider data-retention policies (read the actual ones for the tools I use).
+- API key handling, access permissions, where data is stored and whether it's encrypted, least-privilege access.
+- UK GDPR basics for small businesses (ICO guidance): lawful basis, what data a tool collects, retention, telling customers.
+- Local models are **one** option, not a requirement. Separate repositories don't protect customer data by themselves.
+- **Proof:** a one-page "How this tool handles your data" sheet for the demo, plus a simple AI usage policy template for staff (good workshop material).
 
-### Week 4: RAG ("a chatbot that knows *our* stuff")
-**Concepts:** chunking, embeddings, vector databases, retrieval, why RAG beats "just paste it in" at scale, where RAG fails.
-**Build:** start no-code (a Claude Project / Custom GPT with uploaded docs), then a real RAG chatbot over a sample business's documents (policies, price list, FAQs) using a no-code tool or a simple agent-built script. Try to break it: ask questions the docs don't answer.
-**Proof:** a "staff handbook assistant" demo plus a one-page explainer of how it works and its limits.
+### Week 4: LLMs, RAG & accuracy (Gaps 4 + 6)
+- The difference between training a model, putting information in its context, and retrieving documents (RAG). RAG supplies relevant information; it doesn't guarantee correct answers.
+- **Rules vs generation:** a price calculated by explicit business rules needs different checks from a price an AI writes in conversation. Decide which parts of my demo should be rules and which should be AI.
+- Context windows, missing information, conflicting instructions: why adding another rule doesn't reliably fix a failure, and why the week 2 tests matter.
+- **Proof:** a "where AI is and isn't used in this tool, and why" explanation.
 
-### Week 5: Agents, MCP, and local models
-**Concepts:** what makes something an agent (tools + loop + goal), MCP, agent failure modes, human-in-the-loop, local models and privacy.
-**Build:** connect an agent to 2–3 tools via MCP (e.g. email + calendar + a doc) and have it complete a multi-step task. Install Ollama and run a small model locally. Compare its quality and speed against Claude/ChatGPT.
-**Sparring:** start sessions with the skeptical-business-owner role-play.
-**Proof:** a clear "what agents can and can't safely do for your business today" talk.
+### Week 5: Real costs + the right vocabulary (Gaps 5 + 7)
+- Build a real monthly cost sheet from the actual providers: model calls (tokens × price), messaging/SMS, phone numbers, hosting, automation platform, plus **my support time.** Do it for low, typical and busy months.
+- Automation vs agent vs MCP: which steps follow fixed rules and which let a model choose actions. Scheduling or spawning agents doesn't by itself make something an agent. MCP is a standard way to connect tools; it doesn't make them safe or reliable.
+- **Proof:** a reusable cost-estimate template, and a one-minute explanation of "automation vs agent."
 
-### Week 6: Reliability, cost, privacy, and packaging it to sell
-**Concepts:** evals (test sets, hallucination checks), monitoring, model routing (cheap model for easy tasks, expensive for hard), data-privacy basics, writing an AI usage policy.
-**Build:** a 20-question test set for your Week 4 chatbot. Score it, improve the prompt, re-score. Then draft a one-page AI usage policy template for a small business.
-**Package your offer:**
-- **Free:** 20-minute meeting talk ("5 things you can do with AI tomorrow")
-- **Workshop:** half-day hands-on ("Get your team using AI safely")
-- **Integration:** discovery call → scoped automation/chatbot → monthly support
-**Final sparring:** run your whole pitch against 3 different skeptical personas. **Final diagnostician review.**
+### Week 6: Package it and spar
+- Write the three offers (talk → workshop → supervised integration) with honest scope.
+- **Sparring partner (sales calls):** give the AI a rough outline of my call. Then *"Play a skeptical [accountant / trades owner / estate agent] at BNI. Push back hard on privacy, cost and reliability. Answers must be under 30 seconds. Afterwards, tell me where I was vague."* Run it against 3 personas.
+- **Diagnostician:** *"Here are all my quiz and sparring mistakes [paste]. What underlying misunderstanding do they share?"* Fix the root cause, not each mistake.
+- **Proof:** a 10-minute demo walkthrough covering what it does, the data flow, privacy, testing, failures and costs.
 
 ---
 
-## 4. After the 6 weeks
-- **Keep learning by doing client work.** Every integration teaches more than a course.
-- **Write up every win as a short case study** ("Saved X hours/week for a local Y"). These do the credibility work a certificate can't.
-- **Build in public a little.** Sajjaad's point applies locally too: post what you're building on LinkedIn. The people in your BNI room will see it.
-- **Optional credential:** if you want something to point to, a short vendor course (e.g. Anthropic's or DeepLearning.AI's free short courses) is enough. Results matter more to SMB owners.
-- **Maintenance:** 1–2 hrs/week: keep up with Anki, try one new tool, update your demos.
-
-## 5. Where to start (today)
-1. Run the **Interviewer** prompt (20 min).
-2. Run the **Mapmaker** prompt with this plan pasted in.
-3. Install **Anki**.
-4. Start Week 1.
+## After week 6
+- Every client job → a short case study ("saved X hrs/week for a local Y").
+- Post what I'm building on LinkedIn; the people in my local network will see it.
+- Keep Anki going; add one new topic a month (deeper automation, RAG builds, agents).
+- Move to Stage 4 offers only with case studies + a testing routine I trust.
