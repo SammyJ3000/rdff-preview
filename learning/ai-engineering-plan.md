@@ -1,176 +1,120 @@
-# AI Engineering: Career Curriculum (v3)
+# AI for Business: Sales-First Plan
 
-**Goal:** A long-term career as an AI engineer: someone who can design, build, test, deploy and support AI systems, with foundations that compound over years. **The engineering curriculum below is the career.** Selling services is optional income alongside it, never a replacement for it.
+> **DECISION (2026-11-01): Sales first.** Make money selling AI to local businesses now. Learn only what my sales need (1–3 hrs/week). The full AI engineering curriculum is parked in `parked-career-curriculum.md`.
+> **Review date: 2027-02-01.** I don't change this direction before then. If I feel the urge to re-plan, I write the idea in the Parking Lot and go back to selling.
 
-**Two tracks, run in parallel:**
-- **Engineering track (~70% of my time, 6–7 hrs/week):** the curriculum below. This is what compounds.
-- **Selling track (~30%, 2–3 hrs/week):** meetings, talks and client work, offering **only what my skills currently support** (see the Offer Ladder).
 
-**Honest timeline:** about 6 months to Phase 3, the point where "AI engineer" is a fair description and I can sell bigger builds with confidence. Until then: "AI consultant" or "I help businesses put AI to work."
+**Goal:** Be credible in front of skeptical local business owners (Chamber of Commerce, BNI). Teach practical AI use first, sell workshops next, and sell integrations only once I can explain, test and support what I build.
 
-**Sources:** Sajjaad Khader's AI engineer roadmap (the *what*) · Nick Saraev's AI learning method (the *how*) · my Interviewer gap analysis (where I started).
+**Time:** 6–10 hrs/week. Launch in a few weeks.
 
----
-
-## Anti-drift rules (read at the start of every session)
-
-1. **This file is the source of truth.** Every session starts with: *"Which milestone am I on?"* and ends by ticking something off.
-2. **Every session produces code I wrote or changed and can explain.** A session that's only talk doesn't count.
-3. **My existing tools are case studies, not the curriculum.** They come in at set points (marked 📁) to show a concept in the real world, then I move on.
-4. **Study sessions are engineering.** Selling happens in the field (meetings, calls, client work), not in study sessions. Pitch practice is at most one study session per phase.
-5. **New ideas go in the Parking Lot** (bottom of this file), not into the plan.
-6. **AI as tutor, not ghostwriter, while learning.** I write the first version myself, then AI reviews it (Checker). I use agents to write code for a skill only after I've done it by hand once.
-7. **End of each phase: the no-AI rebuild.** I rebuild a small version of the phase project with no AI help. If I can't, I'm not done with the phase.
-
-8. **Sell only what the Offer Ladder says I've unlocked.** No promising builds I can't yet support.
+**Sources:** Sajjaad Khader, *How to Become a $300K AI Engineer in 2026* (what to learn) · Nick Saraev, *How I Learn Complex Skills & Difficult Subjects So Fast with AI* (how to learn) · my Interviewer session (where I actually am).
 
 ---
 
-## Offer Ladder (what I can honestly sell, by phase)
+## Where I am (Interviewer result)
 
-| Unlocked after | I can sell | Why it's honest |
+> My ability to **build** with AI is well ahead of my ability to **explain, verify and support** what I've built.
+
+**Strengths:** paid client work, tools I use daily, connected external data, turning business problems into product ideas, I know why context and project rules matter, I can spot commercially useful problems (missed leads, slow quoting, scattered information, admin).
+
+**Gaps, ranked:**
+1. How data moves through a tool (APIs, storage, what happens when a connection fails)
+2. Privacy & security (using data vs training on it, permissions, keys, storage, provider policies)
+3. Reliability & safe limits (fixed scripts fail too; testing, failure alerts, human approval)
+4. LLMs vs RAG vs factual accuracy (rule-based prices vs AI-generated prices)
+5. Real operating costs (my £20–£50/month estimate isn't backed up yet)
+6. Prompting & context limits (adding another rule doesn't fix everything)
+7. Automation vs agents vs MCP (the right vocabulary and the limits)
+
+**Misconception to kill first:** *"An automation can't make mistakes because it does the same thing every time."* If an automation does the same thing every time, it also makes the same mistake every time.
+
+**Skip for now:** training models, maths, transformer internals, fine-tuning, running my own model infrastructure, complex multi-agent systems, building custom MCP servers, learning every automation platform, model-comparison rabbit holes, "I can integrate your whole business" claims.
+
+---
+
+## The big change: learn everything through ONE demo
+
+**Main demo:** my AmSpec quoting tool, where I lost Andrew because I couldn't explain how it gets its data. **Warm-up / BNI example:** a missed-call text-back tool (simpler, and every small business gets it straight away).
+
+Instead of six separate topics, every week takes **my AmSpec quoting demo** apart from a different angle. By week 6 I can explain one real tool completely, covering data, privacy, failures, cost and accuracy. That's the credibility. It's also what Nick means by *production over consumption*: I learn by doing things to a real tool, not by watching videos about one.
+
+## Offer stages (don't skip ahead)
+
+| Stage | What I sell | When |
 |---|---|---|
-| **Now** | Free talks; paid "use AI well and safely" workshops for teams (ChatGPT/Claude/Copilot, prompting, an AI usage policy) | A year of real use plus client work already supports this |
-| **Phase 1** | Simple no-code automations (Zapier/Make/n8n), set up and supported | I understand APIs, data and failures well enough to fix them |
-| **Phase 2** | Small AI integrations: enquiry triage, document extraction, drafting tools, with structured output, validation and a human check | I can build, read and debug them myself |
-| **Phase 3** | Bigger builds: document Q&A (RAG) assistants, agents connected to business tools, deployed and measured with evals | I can test, deploy, monitor and support them |
-| **Phase 4+** | Ongoing retainers, higher-ticket systems, case-study-led selling | A track record |
+| 1 | Free talks + "how to use ChatGPT/Claude/Copilot well" sessions | **Now.** This uses strengths I already have. |
+| 2 | Paid hands-on workshops (staff using AI safely) | After Week 3 (privacy covered) |
+| 3 | Small, supervised integrations (human approves outputs) | After Week 6, starting with a narrow, tested tool |
+| 4 | Unattended integrations with sensitive data or customer commitments | Later, once I have case studies and proper testing |
 
 ---
 
-## Phase 1: Foundations (weeks 1–6)
+## The weekly learning loop (Nick Saraev's method)
 
-*Changed from v1: I'm learning Python properly. Not to computer-science depth, but well enough to write, read and debug real code myself. An AI engineer who can't read the code their agent wrote can't support it.*
+1. **Explain** (Explainer): *"Explain [topic] using my AmSpec quoting demo as the example, at business-owner level, then junior-developer level."*
+2. **Redo without help.** After any explanation, go back to the start and do or explain it myself with no AI. It only adds 10–15% more time and makes the biggest difference. Nodding along to an explanation means I've only read about it, not learned it.
+3. **Socratic:** *"Don't give me answers. Ask me questions about [topic] until I find what I don't know."*
+4. **Build / Check:** do the week's task, then *"Here's my work and reasoning. Find what's wrong or missing and any faster way. Don't rewrite it."*
+5. **Listener:** explain the week's topic three ways: **talk** (voice memo, as if to a BNI room), **draw** (quick sketch), **write** (short version). Then *"Grade all three against [source]. What did I miss or get wrong?"*
+6. **Examiner:** *"Quiz me one question at a time, each harder than the last, until I start guessing. Then tell me my level."*
+7. **Clerk:** *"Turn my notes into a clean outline + flashcards. Don't add anything I didn't write."* Put the cards into Anki and review them for 10 min/day.
 
-| Skill | Done when I can... |
-|---|---|
-| Terminal + Git/GitHub | Create a repo, commit, branch, push, open a PR without help |
-| Python core | Write functions, use lists/dicts, loops, conditionals, error handling (try/except) |
-| Files + JSON | Read/write files; load, change and save JSON |
-| Packages + environments | Set up a project with `uv`, install packages, explain what a virtual environment is |
-| HTTP + APIs | Call a REST API with `requests`, handle status codes (200/401/429/500), use API keys safely via `.env` |
-| SQL basics (SQLite) | Create a table, INSERT, SELECT/WHERE/JOIN from Python |
-| Testing basics | Write and run simple `pytest` tests |
+**Running "hard questions" list:** every week, add the 5 hardest questions a skeptical owner could ask about that topic, then answer them out loud without notes.
 
-**Project 1:** a lead-list builder. It pulls local businesses from a free public API (e.g. the Companies House API), stores them in SQLite, filters by area and industry, and has tests. A real foundation skill, and useful for my own prospecting.
+**Rule against over-reliance:** before asking an agent to build or fix anything, write down how I think it works. Afterwards, explain back what it did.
 
 ---
 
-## Phase 2: Working with models (weeks 7–12)
+## The 6 weeks
 
-| Skill | Done when I can... |
-|---|---|
-| How LLMs work | Explain tokens, context windows, temperature, training vs inference, why they hallucinate |
-| LLM APIs | Call the Anthropic and OpenAI APIs from Python; handle errors, retries, streaming |
-| Context engineering | Write system prompts; manage what goes in the context and why |
-| Structured output + validation | Get JSON from a model, validate it with Pydantic, reject bad output |
-| Tool use / function calling | Let a model call my Python functions, by hand, with no framework |
-| Cost | Count tokens and calculate cost per request and per month |
-| Local models | Run a model with Ollama and call it from Python; compare quality, speed and cost |
+### Week 1: Trace the data (Gap 1)
+- Draw the full journey of one enquiry through my AmSpec quoting demo: customer → form/message → API call(s) → my app → AI model (if any) → storage → reply.
+- For every arrow, note **what data moves, where it's stored, who can see it, and what happens if that step fails.**
+- Learn just enough about APIs to follow it: requests and responses, API keys, JSON, status codes (200/401/429/500), webhooks.
+- **Redo without help:** redraw the diagram from memory.
+- **Proof:** a one-page data-flow diagram of the demo, plus a 2-minute answer to Andrew's question: *"How do you get the data, and how does it work?"*
 
-📁 **Case study (1 session): my quote tool.** It's a live example of "the LLM does language, deterministic code does maths" plus schema validation. Read `engine/` and trace one quote through the code.
+### Week 2: Make it reliable (Gap 3 + the misconception)
+- Write **10–20 test cases** for the AmSpec quoting demo: known requests → the correct quote (including edge cases, missing info, silly inputs). Run them.
+- Break it on purpose: turn off a connection, send duplicate enquiries, feed it bad data. What happens?
+- Add (or design) **failure handling:** an alert to a person, no duplicate actions, and **human approval before any quote goes to a customer.**
+- **Proof:** a test sheet with results, plus a plain-English answer to "what happens when it goes wrong?"
 
-**Project 2 (sellable):** an enquiry triage tool, the kind of thing I'd sell after Phase 2. Messy incoming messages (emails or texts) → model extracts structured fields → validated → routed/stored in SQLite → drafted reply. Includes cost tracking and tests.
+### Week 3: Privacy & security (Gap 2) → unlocks paid workshops
+- Using data vs training on data; consumer vs business/API plans; provider data-retention policies (read the actual ones for the tools I use).
+- API key handling, access permissions, where data is stored and whether it's encrypted, least-privilege access.
+- UK GDPR basics for small businesses (ICO guidance): lawful basis, what data a tool collects, retention, telling customers.
+- Local models are **one** option, not a requirement. Separate repositories don't protect customer data by themselves.
+- **Proof:** a one-page "How this tool handles your data" sheet for the demo, plus a simple AI usage policy template for staff (good workshop material).
 
----
+### Week 4: LLMs, RAG & accuracy (Gaps 4 + 6)
+- The difference between training a model, putting information in its context, and retrieving documents (RAG). RAG supplies relevant information; it doesn't guarantee correct answers.
+- **Rules vs generation:** a price calculated by fixed business rules needs different checks from a price an AI writes in conversation. Decide which parts of my demo should be rules and which should be AI.
+- Context windows, missing information, conflicting instructions: why adding another rule doesn't reliably fix a failure, and why the week 2 tests matter.
+- **Proof:** a "where AI is and isn't used in this tool, and why" explanation.
 
-## Phase 3: Shipping AI systems (weeks 13–22)
+### Week 5: Real costs + the right vocabulary (Gaps 5 + 7)
+- Build a real monthly cost sheet from the actual providers: model calls (tokens × price), messaging/SMS, phone numbers, hosting, automation platform, plus **my support time.** Do it for low, typical and busy months.
+- Automation vs agent vs MCP: which steps follow fixed rules and which let a model choose actions. Scheduling or spawning agents doesn't by itself make something an agent. MCP is a standard way to connect tools; it doesn't make them safe or reliable.
+- **Proof:** a reusable cost-estimate template, and a one-minute explanation of "automation vs agent."
 
-| Skill | Done when I can... |
-|---|---|
-| Embeddings + vector search | Explain embeddings; build similarity search by hand |
-| RAG from scratch | Chunk → embed → store → retrieve → generate, without a framework first |
-| RAG with tools | Rebuild it with a vector DB (e.g. Chroma/pgvector) and explain the trade-offs |
-| Evals | Build a golden test set, measure accuracy/hallucination, use LLM-as-judge carefully |
-| Agents | Build an agent loop by hand (goal → tool calls → observe → repeat), with limits and human approval |
-| MCP | Build a simple MCP server that exposes my own tools to Claude |
-| Web backend | Wrap a system in a FastAPI endpoint |
-| Deployment | Containerise with Docker basics and deploy to a hosting service; use secrets properly |
-| Reliability + governance | Logging, failure handling, retries, model routing (cheap vs strong model), privacy basics (UK GDPR) |
-
-📁 **Case study (1 session): missed-call text-back.** Webhooks, third-party APIs (telephony/SMS), and what happens when a step fails.
-📁 **Case study (1 session): quote tool evals.** Its `tests/golden/` folder is a real golden dataset. Run the tests, break a rate on purpose, watch them catch it.
-
-**Project 3 (sellable):** a document Q&A assistant (RAG), e.g. "ask our staff handbook / price list / policies," **with an eval suite and a measured accuracy score**, deployed with a web endpoint. My Phase 3 demo for clients.
-**Project 4 (sellable):** an agent that completes a multi-step business task (e.g. enquiry → check calendar → draft booking → wait for approval) using my own MCP server.
-
----
-
-## Phase 4: Proof and compounding (weeks 23–26, then ongoing)
-
-- **Capstone = a real paid client build:** data in, AI in the right places, deterministic logic elsewhere, evals, deployed, documented, supported.
-- **Case studies:** every client job written up (problem → what I built → measured result). These replace a CV.
-- **Demo library:** Projects 2–4 + the quote tool, each ready to show in 5 minutes and explain technically if asked.
-- **Visibility:** post what I build (LinkedIn), speak at local meetings.
-- **Keep compounding:** one new skill per quarter (e.g. voice agents, fine-tuning basics, more advanced evals), picked from the Parking Lot, never more than one at a time.
-- **Optional:** a job or contract role later, if I ever want one. The same foundations make that possible.
+### Week 6: Package it and spar
+- Write the three offers (talk → workshop → supervised integration) with honest scope.
+- **Sparring partner (sales calls):** give the AI a rough outline of my call. Then *"Play a skeptical [accountant / trades owner / estate agent] at BNI. Push back hard on privacy, cost and reliability. Answers must be under 30 seconds. Afterwards, tell me where I was vague."* Run it against 3 personas.
+- **Diagnostician:** *"Here are all my quiz and sparring mistakes [paste]. What underlying misunderstanding do they share?"* Fix the root cause, not each mistake.
+- **Proof:** a 10-minute demo walkthrough covering what it does, the data flow, privacy, testing, failures and costs.
 
 ---
 
-## Where to learn it (ONE main resource per phase; finish it before adding anything)
-
-Rule: one **main** course per phase. "Reference" items are for looking things up, not extra courses. When stuck, use AI as the Explainer before reaching for a new resource.
-
-**Phase 1: Foundations**
-- **Main:** CS50's Introduction to Programming with Python (CS50P, Harvard, free: cs50.harvard.edu/python). Do the problem sets; they're the "production" Nick talks about.
-- Terminal + Git: *The Missing Semester of Your CS Education* (MIT, free): the shell, Git and editor lectures only.
-- SQL: SQLBolt (free, interactive, ~3 hrs).
-- Reference: *Automate the Boring Stuff with Python* (free online) for practical scripts, files, JSON and APIs.
-
-**Phase 2: Working with models**
-- **Main:** Anthropic's courses on GitHub (github.com/anthropics/courses, free): API fundamentals → prompt engineering tutorial → real-world prompting → tool use. All in Python notebooks.
-- Concepts: Andrej Karpathy's *Intro to Large Language Models* (1-hr YouTube talk); 3Blue1Brown's neural networks / transformers videos for intuition (no maths needed).
-- Reference: Anthropic and OpenAI API docs; Pydantic docs (validation); Ollama docs (local models).
-
-**Phase 3: Shipping AI systems**
-- **Main (the field's textbook):** Chip Huyen, *AI Engineering* (O'Reilly, 2025). Read alongside building, one chapter per topic: RAG, agents, evals, deployment.
-- Short, hands-on (free): DeepLearning.AI short courses. Pick only the one matching the current skill: RAG, evaluation, agents/tool use, and *MCP: Build Rich-Context AI Apps with Anthropic*.
-- Agents: Anthropic's article *Building Effective Agents* (read before building Project 4).
-- Evals: Hamel Husain's blog posts on LLM evals (start with *Your AI Product Needs Evals*).
-- Deployment: FastAPI's official tutorial; Docker's "Get started" guide.
-- Optional structured alternative (paid): DataCamp's AI Engineer track, recommended in Sajjaad's video.
-
-**Phase 4+: Keep compounding**
-- Hugging Face's free courses (LLM course, Agents course) when going deeper on open models.
-- Pick one new topic per quarter from the Parking Lot.
+## After week 6
+- Every client job → a short case study ("saved X hrs/week for a local Y").
+- Post what I'm building on LinkedIn; the people in my local network will see it.
+- Keep Anki going; add one new topic a month (deeper automation, RAG builds, agents).
+- Move to Stage 4 offers only with case studies + a testing routine I trust.
 
 ---
 
-## How every session runs (Nick Saraev's method)
-
-1. **Name it:** what skill and milestone is this? (Check the tables above.)
-2. **Explain** (Explainer): *"Explain [skill] at beginner level, then junior-developer level, with a real example."*
-3. **Touch it:** write code. I write it first; AI is the **Checker**: *"Here's my code and why. Find what's wrong. Don't rewrite it."*
-4. **Redo without help:** rebuild or re-explain it from scratch without AI.
-5. **Socratic + Examiner:** *"Ask me questions until I find what I don't understand"* → *"Quiz me, each question harder, until I'm guessing."*
-6. **Listener:** explain it out loud / draw it / write it, and have AI grade it against the source.
-7. **Clerk:** notes → flashcards → Anki, 10 min/day.
-8. **Tick the milestone** in this file.
-
-**Every 4 weeks, Diagnostician:** *"Here are my mistakes from the last month. What misunderstanding do they share?"*
-
----
-
-## A typical week (8–10 hrs)
-
-| Session | Time | What happens |
-|---|---|---|
-| 1 | 2 hrs | **New material:** main resource lesson → Explainer for anything unclear → write the code yourself |
-| 2 | 2 hrs | **Practice:** problem set / project work → Checker reviews your code → redo without help |
-| 3 | 2 hrs | **Project:** build the phase project → break it on purpose → fix it |
-| 4 | 1.5 hrs | **Consolidate:** Socratic + Examiner quiz → Listener (explain out loud) → Clerk makes flashcards → tick milestones |
-| Daily | 10 min | Anki review |
-
-## Progress log
-
-| Date | Phase / skill | What I built or did | Ticked? |
-|---|---|---|---|
-| 2026-11-01 | Interviewer + Mapmaker | Gap analysis; plan v1→v3 | ✅ |
-| 2026-11-01 | 📁 Quote tool (early case study) | Learned: LLM vs deterministic code, schema validation, human-in-the-loop, evals, data provenance | ✅ (concepts only; hands-on comes in Phase 2) |
-
----
-
-## Parking Lot (ideas that are NOT part of the current plan)
-
-- Pitch for the AmSpec/Andrew follow-up: "how does it get its data?" answer (drafted 2026-11-01)
-- Workshop content and pricing → selling track (unlocked **now**)
+## Parking Lot
+- Full AI engineering career curriculum → `parked-career-curriculum.md` (review 2027-02-01)
+- Andrew's "how does it get its data?" answer: practised 2026-11-01
