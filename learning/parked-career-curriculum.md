@@ -1,4 +1,4 @@
-> **PARKED on 2026-11-01.** Decision: sales first. Do not open this until the review date (2027-02-01) unless the sales-first plan says to.
+> **PARKED on 2026-11-01.** This is the long-term deeper curriculum for AFTER the 10-week sprint (week 11 onwards, 3–5 hrs/week). Do not use it during the sprint.
 
 # AI Engineering: Career Curriculum (v3)
 
