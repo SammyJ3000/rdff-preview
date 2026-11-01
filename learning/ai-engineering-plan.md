@@ -1,6 +1,6 @@
 # AI Engineering: Career Curriculum (v3)
 
-**Goal:** Build a business selling AI services (workshops now, integrations as my skills grow) on **real engineering foundations** that compound over years. I'm not job-hunting. Every project I build should be something I can **sell or show to a client**, not a portfolio piece for recruiters.
+**Goal:** A long-term career as an AI engineer: someone who can design, build, test, deploy and support AI systems, with foundations that compound over years. **The engineering curriculum below is the career.** Selling services is optional income alongside it, never a replacement for it.
 
 **Two tracks, run in parallel:**
 - **Engineering track (~70% of my time, 6–7 hrs/week):** the curriculum below. This is what compounds.
@@ -107,6 +107,35 @@
 
 ---
 
+## Where to learn it (ONE main resource per phase; finish it before adding anything)
+
+Rule: one **main** course per phase. "Reference" items are for looking things up, not extra courses. When stuck, use AI as the Explainer before reaching for a new resource.
+
+**Phase 1: Foundations**
+- **Main:** CS50's Introduction to Programming with Python (CS50P, Harvard, free: cs50.harvard.edu/python). Do the problem sets; they're the "production" Nick talks about.
+- Terminal + Git: *The Missing Semester of Your CS Education* (MIT, free): the shell, Git and editor lectures only.
+- SQL: SQLBolt (free, interactive, ~3 hrs).
+- Reference: *Automate the Boring Stuff with Python* (free online) for practical scripts, files, JSON and APIs.
+
+**Phase 2: Working with models**
+- **Main:** Anthropic's courses on GitHub (github.com/anthropics/courses, free): API fundamentals → prompt engineering tutorial → real-world prompting → tool use. All in Python notebooks.
+- Concepts: Andrej Karpathy's *Intro to Large Language Models* (1-hr YouTube talk); 3Blue1Brown's neural networks / transformers videos for intuition (no maths needed).
+- Reference: Anthropic and OpenAI API docs; Pydantic docs (validation); Ollama docs (local models).
+
+**Phase 3: Shipping AI systems**
+- **Main (the field's textbook):** Chip Huyen, *AI Engineering* (O'Reilly, 2025). Read alongside building, one chapter per topic: RAG, agents, evals, deployment.
+- Short, hands-on (free): DeepLearning.AI short courses. Pick only the one matching the current skill: RAG, evaluation, agents/tool use, and *MCP: Build Rich-Context AI Apps with Anthropic*.
+- Agents: Anthropic's article *Building Effective Agents* (read before building Project 4).
+- Evals: Hamel Husain's blog posts on LLM evals (start with *Your AI Product Needs Evals*).
+- Deployment: FastAPI's official tutorial; Docker's "Get started" guide.
+- Optional structured alternative (paid): DataCamp's AI Engineer track, recommended in Sajjaad's video.
+
+**Phase 4+: Keep compounding**
+- Hugging Face's free courses (LLM course, Agents course) when going deeper on open models.
+- Pick one new topic per quarter from the Parking Lot.
+
+---
+
 ## How every session runs (Nick Saraev's method)
 
 1. **Name it:** what skill and milestone is this? (Check the tables above.)
@@ -121,6 +150,16 @@
 **Every 4 weeks, Diagnostician:** *"Here are my mistakes from the last month. What misunderstanding do they share?"*
 
 ---
+
+## A typical week (8–10 hrs)
+
+| Session | Time | What happens |
+|---|---|---|
+| 1 | 2 hrs | **New material:** main resource lesson → Explainer for anything unclear → write the code yourself |
+| 2 | 2 hrs | **Practice:** problem set / project work → Checker reviews your code → redo without help |
+| 3 | 2 hrs | **Project:** build the phase project → break it on purpose → fix it |
+| 4 | 1.5 hrs | **Consolidate:** Socratic + Examiner quiz → Listener (explain out loud) → Clerk makes flashcards → tick milestones |
+| Daily | 10 min | Anki review |
 
 ## Progress log
 
